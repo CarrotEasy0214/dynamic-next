@@ -80,7 +80,7 @@ const Item = ({
           alt=""
           onMouseOver={() => setIsListHover(true)}
           onMouseOut={() => setIsListHover(false)}
-          className=""
+          className="transition-all"
         />
         <div className="text-slate-600">
           <div className="flex justify-between pt-[10%] px-[15%] text-slate-600">
