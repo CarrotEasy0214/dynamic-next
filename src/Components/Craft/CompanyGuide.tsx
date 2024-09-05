@@ -36,7 +36,7 @@ const CompanyGuide = () => {
               </div>
             </div>
             <div className="flex justify-center py-[1%] px-[8%] gap-4 w-[100%]">
-              <div className="relative h-[320px] w-[100%] overflow-y-hidden hover:w-[150%] transition-all">
+              <div className="relative h-[320px] w-[100%] overflow-hidden hover:w-[150%] transition-all">
                 <Image src={craft1} alt="" fill className="h-auto w-auto" />
                 <div className="absolute text-white bottom-10 right-10 font-bold text-[2rem]">SOUND</div>
               </div>
@@ -54,9 +54,9 @@ const CompanyGuide = () => {
                 <p>We bring an uncompromising approach to the design and</p>
                 <p>performance of our products</p>
               </div>
-              <div className="w-[8rem] h-[3rem] text-[#4c4c4c] bg-white leading-[3rem] text-center font-semibold">
+              <button className="w-[8rem] h-[3rem] text-[#4c4c4c] bg-white leading-[3rem] text-center font-semibold">
                 Learn More
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -70,25 +70,28 @@ const CompanyGuide = () => {
                 thoughtfully considered to enhance your listening experience
               </div>
             </div>
-            <div className="flex justify-center flex-col p-[1%] gap-4 w-full">
+            <div className="flex justify-center flex-col p-[1%] gap-4 w-full mb-8">
               <div className="flex justify-center relative h-96">
                 <Image src={craft1Mobile} fill alt="" className="" />
-                <div>SOUND</div>
+                <div className="absolute text-white bottom-10 right-10 font-bold text-[2rem]">SOUND</div>
               </div>
               <div className="flex justify-center relative h-96">
                 <Image src={craft2Mobile} fill alt="" />
+                <div className="absolute text-white bottom-10 right-10 font-bold text-[2rem]">MATERIALS</div>
               </div>
               <div className="flex justify-center relative h-96">
                 <Image src={craft3Mobile} fill alt="" />
+                <div className="absolute text-white bottom-10 right-10 font-bold text-[2rem]">DESIGN</div>
               </div>
             </div>
-            <div className="flex flex-col justify-between text-white p-[1%]">
+            <div className="flex flex-col justify-between text-white p-[1%] gap-8">
               <div className="font-semibold">
-                <p>We bring an uncompromising approach to the design and</p>
-                <p>performance of our products</p>
+                <p>We bring an uncompromising approach to the design and performance of our products</p>
               </div>
-              <div className="w-[8rem] h-[3rem] text-[#4c4c4c] bg-white leading-[3rem] text-center font-semibold">
-                Learn More
+              <div className="flex justify-center">
+                <button className="w-[8rem] h-[3rem] text-[#4c4c4c] bg-white leading-[3rem] text-center font-semibold">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>

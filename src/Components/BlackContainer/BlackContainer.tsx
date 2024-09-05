@@ -8,8 +8,8 @@ import twitter from "../../img/svg/twitter.svg";
 const BlackContainer = () => {
   return (
     <div className="bg-black text-white pb-12">
-      <div className="flex">
-        <div className="w-[22rem] px-[10%] py-[5%] flex-1 flex flex-col justify-center">
+      <div className="flex p-10 justify-between">
+        <div className="flex-col flex-1 pl-10 pr-36">
           <div className="text-[1.6rem] font-semibold">Sign up for early access, news and exclusive offers</div>
           <div className="my-4 border-white border-solid border-2">
             <input type="text" placeholder="Your email" className="w-full h-12 bg-black border-none pl-4 text-white" />
@@ -23,23 +23,24 @@ const BlackContainer = () => {
           </div>
           <button className="w-full h-12 mt-4 text-[#4c4c4c] font-bold bg-white ">SUBMIT</button>
         </div>
-        <div className="flex flex-2 gap-12 p-12 text-[1.1rem] text-center px-[10%] py-[7%]">
-          <div className="flex-1">
+        <div className="flex justify-center flex-1 pr-10 pl-36">
+          <div className="flex-1 flex flex-col justify-center items-center">
             <div className="font-bold mb-4">Help & Info</div>
             <div className="mt-4">Product Comparisons</div>
             <div className="mt-4">Product Support</div>
             <div className="mt-4">Shopping Info</div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col justify-center items-center">
             <div className="font-bold mb-4">About</div>
             <div className="mt-4">About Us</div>
             <div className="mt-4">News</div>
             <div className="mt-4">Contact Us</div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col justify-start items-center">
             <div className="font-bold mb-4">Gifting</div>
             <div className="mt-4">Corporate Gifting</div>
             <div className="mt-4">Digital Gift Card</div>
+            <div className="mt-4"></div>
           </div>
         </div>
       </div>
