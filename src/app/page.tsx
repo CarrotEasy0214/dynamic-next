@@ -8,13 +8,13 @@ import MandD from "@/Components/M&D/MandD";
 import ShippingDetail from "@/Components/Shipping/ShippingDetail";
 import SupportCenter from "@/Components/Support/SupportCenter";
 import BlackContainer from "@/Components/BlackContainer/BlackContainer";
+import TTest from "@/Components/BlackContainer/TTest";
 // import MySlideMobile from "@/Components/Slide/MySlideMobile";
 
 export default function Home() {
   return (
     <div>
       <MySlide></MySlide>
-      {/* <MySlideMobile></MySlideMobile> */}
       <ProductPage></ProductPage>
       <Card></Card>
       <CompanyGuide></CompanyGuide>
