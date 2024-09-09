@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
+
+      - name: checkout cache
         uses: actions/cache@v4
         with:
           path: ~/.npm
