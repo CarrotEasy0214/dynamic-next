@@ -12,12 +12,6 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v4
 
-      - name: checkout cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -47,7 +41,7 @@ jobs:
 
       - name: Build Front
         working-directory: ./
-        run: npm run build
+        run: npm run next build
 
       - name: Copy Files to EC2
         run: |
