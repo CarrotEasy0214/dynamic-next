@@ -43,7 +43,7 @@ jobs:
       - name: .env setting
         working-directory: ./
         run: |
-          echo "REACT_APP_HOST=${{ secrets.EC2_HOST }}" >> .env
+          echo "REACT_APP_HOST=${{  secrets.EC2_HOST }}" >> .env
 
       - name: Install Dependencies of Front
         working-directory: ./

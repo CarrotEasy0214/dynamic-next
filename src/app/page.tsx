@@ -1,5 +1,5 @@
 "use client";
-import MySlide from "@/Components/Slide/MySlide";
+import MySlide from "@/Components/Slide/Myslide";
 import ProductPage from "@/Components/ProductPage/ProductPage";
 import Card from "@/Components/Card/Card";
 import CompanyGuide from "@/Components/Craft/CompanyGuide";
