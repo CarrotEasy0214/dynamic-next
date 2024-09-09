@@ -8,6 +8,7 @@ import Search from "../../img/svg/search-outline.svg";
 import useIsMd from "@/Hook/MediaMd";
 import useIsMs from "@/Hook/MediaMs";
 import Modal from "@/Hook/Modal";
+import Info from "../../img/svg/person-outline.svg";
 
 const LogoComp = () => {
   const [isOpenModal, setOpenModal] = useState<boolean>(false);
@@ -34,10 +35,27 @@ const LogoComp = () => {
             {isOpenModal && (
               <Modal onClickToggleModal={onClickToggleModal}>
                 <div
-                  className="fixed top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-slate-50 opacity-50"
+                  className="fixed top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-slate-400 opacity-50"
                   onClick={onClickToggleModal}
                 ></div>
-                <div className="fixed w-20 h-20 bg-white left-10 top-20"></div>
+                <div className="fixed w-[44%] h-[96%] bg-white left-5 top-5 rounded text-[#4c4c4c]">
+                  <div className="pt-7 pb-3 pl-10" onClick={onClickToggleModal}>
+                    <p className="pt-3 text-sm border w-12 h-12 rounded-full leading-12 ">X</p>
+                  </div>
+                  <div className="py-2 pl-11 text-start text-[1.3rem]">HEADPHONES</div>
+                  <div className="py-2 pl-11 text-start text-[1.3rem]">EARPHONES</div>
+                  <div className="py-2 pl-11 text-start text-[1.3rem]">ACCESSORIES</div>
+                  <div className="py-2 pl-11 text-start text-[1.3rem]">COLLABORATIONS</div>
+                  <div className="py-2 pl-11 text-start text-[1.3rem]">BLOG</div>
+                  <div className="border-b w-[90%] mx-[5%] bottom-0"></div>
+                  <div className="flex py-7 justify-between px-6">
+                    <div>US</div>
+                    <div className="flex gap-4">
+                      <Image src={Info} alt=""></Image>
+                      <div>Account</div>
+                    </div>
+                  </div>
+                </div>
               </Modal>
             )}
             {!isMs ? "" : <Image src={Search as unknown as string} alt="" className="cursor-pointer block ml-2" />}
