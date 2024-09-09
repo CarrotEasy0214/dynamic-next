@@ -85,7 +85,9 @@ const Item = ({
         <div className="text-slate-600">
           <div className="flex justify-between pt-[10%] px-[15%] text-slate-600">
             <div className="text-xl font-bold">{title}</div>
-            <div className="flex items-end justify-center font-bold">{price}</div>
+            <div className="flex items-end justify-center font-bold">
+              {price}
+            </div>
           </div>
           <div className="px-[15%] pt-[2%]">{content}</div>
           {Colors.map((props) => (

@@ -1,4 +1,4 @@
-// File: /mnt/c/Users/web/Desktop/Git/dynamic-next/src/app/page.tsx
+// File: C:\Users\parks\OneDrive\Desktop\Git\dynamic-next\src\app\page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
