@@ -1,6 +1,6 @@
 import useIsMd from "@/Hook/MediaMd";
 import { useState, useCallback } from "react";
-import Modal from "../../Hook/Modal";
+// import Modal from "../../Hook/Modal";
 import TTTest from "./TTTest";
 
 const FooterMenu = () => {
