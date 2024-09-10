@@ -62,4 +62,5 @@ jobs:
           nvm use --lts
           npm install -g pm2
           pm2 stop all
-          pm2 start /var/www/front/server/app/server.js --name frontEnd'
+          cd /var/www/front
+          pm2 start npm --name "nextjs-app" -- start'
