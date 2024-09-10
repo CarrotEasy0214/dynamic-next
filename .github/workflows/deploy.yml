@@ -8,8 +8,6 @@ on:
 jobs:
   deploy_front:
     runs-on: ubuntu-latest
-    needs:
-      - test_node
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
