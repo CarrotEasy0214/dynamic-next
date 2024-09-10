@@ -13,5 +13,5 @@
 // import MySlideMobile from "@/Components/Slide/MySlideMobile";
 
 export default function Home() {
-  return <div className="bg-black">ㅎㅇ</div>;
+  return <div className="bg-red-600">ㅎㅇ</div>;
 }
