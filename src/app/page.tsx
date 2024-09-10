@@ -1,4 +1,7 @@
 "use client";
+
+import NavBar from "@/Components/Nav/NavBar";
+
 // import MySlide from "@/Components/Slide/Myslide";
 // // import ProductPage from "@/Components/ProductPage/ProductPage";
 // import Card from "@/Components/Card/Card";
@@ -13,5 +16,9 @@
 // import MySlideMobile from "@/Components/Slide/MySlideMobile";
 
 export default function Home() {
-  return <div className="bg-red-600">ㅎㅇ</div>;
+  return (
+    <div className="bg-red-600">
+      <NavBar></NavBar>
+    </div>
+  );
 }
