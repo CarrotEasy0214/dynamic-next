@@ -9,6 +9,14 @@ jobs:
   deploy_front:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.EC2_KEY }}
+
       - name: Ensure SSH directory exists
         run: |
           mkdir -p ~/.ssh
