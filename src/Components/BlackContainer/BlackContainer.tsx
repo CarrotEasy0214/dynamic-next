@@ -11,7 +11,7 @@ const BlackContainer = () => {
     <div className="bg-black text-white pb-12">
       <FooterMenu></FooterMenu>
       <div className="md:flex justify-between py-10 text-sm">
-        <div className="flex justify-center flex-col pl-[4%]">
+        <div className="flex justify-center flex-col">
           <div className="flex gap-6">
             <div>Do Not Sell / Share</div>
             <div>Notice At Collection</div>
