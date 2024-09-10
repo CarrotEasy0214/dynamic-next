@@ -65,8 +65,6 @@ jobs:
       - name: Build Front
         working-directory: ./
         run: npm run build
-          npm run export
-          npx serve@latest out
 
       - name: Copy Files to EC2
         run: |
