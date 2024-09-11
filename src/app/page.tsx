@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Notice></Notice>
-      <div className="bg-black text-white">ㅎㅇ</div>
+      <div className="bg-black text-white text-center py-1">ㅎㅇ</div>
       {/* <MySlide></MySlide>
       <Prod></Prod>
       <Card></Card>
