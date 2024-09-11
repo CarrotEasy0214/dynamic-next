@@ -1,5 +1,7 @@
 "use client";
 
+import Notice from "@/Components/Nav/Notice";
+
 // import MySlide from "@/Components/Slide/Myslide";
 // import Prod from "@/Components/ProductPage/Prod";
 // // import ProductPage from "@/Components/ProductPage/ProductPage";
@@ -18,6 +20,7 @@
 export default function Home() {
   return (
     <>
+      <Notice></Notice>
       <div className="bg-black text-white">ㅎㅇ</div>
       {/* <MySlide></MySlide>
       <Prod></Prod>

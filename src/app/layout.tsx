@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Notice from "@/Components/Nav/Notice";
-import MainLogo from "@/Components/Nav/MainLogo";
+// import Notice from "@/Components/Nav/Notice";
+// import MainLogo from "@/Components/Nav/MainLogo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <Notice></Notice>
+        {/* <Notice></Notice> */}
         {children}
       </body>
     </html>
