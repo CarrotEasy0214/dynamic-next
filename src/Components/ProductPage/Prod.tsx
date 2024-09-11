@@ -21,13 +21,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useState } from "react";
 
 const Prod = () => {
+  const [isOnClick, setIsOnClick] = useState(false);
   return (
     <div className="w-full">
       <div className="text-slate-600 text-2xl ml-5">Featured Products</div>
       <div className="flex left-10 w-full">
-        <Swiper spaceBetween={20} slidesPerView={1.8} className="flex justify-center">
+        <Swiper spaceBetween={20} slidesPerView={1.4} className="flex justify-center">
           <SwiperSlide>
             <div className="flex flex-col justify-center">
               <Image src={product1} alt="" className="w-full"></Image>
@@ -35,7 +37,68 @@ const Prod = () => {
                 <div className="text-sm font-bold">MW09</div>
                 <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
                 <div className="text-sm font-bold">From $ 349.00</div>
-                <div>색상1</div>
+                <div className="flex items-center">
+                  <div
+                    className={
+                      isOnClick
+                        ? "border-2 border-black rounded-full p-[0.2rem] flex justify-center"
+                        : "w-8 h-8 flex items-center"
+                    }
+                    onClick={() => setIsOnClick(!isOnClick)}
+                  >
+                    <Image src={MW09Black ?? ""} alt="" className="w-5 h-5"></Image>
+                  </div>
+                  <div
+                    className={
+                      isOnClick
+                        ? "border-2 border-black rounded-full p-[0.2rem] flex justify-center"
+                        : "w-8 h-8 flex items-center"
+                    }
+                    onClick={() => setIsOnClick(!isOnClick)}
+                  >
+                    <Image src={MW09Blue ?? ""} alt="" className="w-5 h-5"></Image>
+                  </div>
+                  <div
+                    className={
+                      isOnClick
+                        ? "border-2 border-black rounded-full p-[0.2rem] flex justify-center"
+                        : "w-8 h-8 flex items-center"
+                    }
+                    onClick={() => setIsOnClick(!isOnClick)}
+                  >
+                    <Image src={MW09G3 ?? ""} alt="" className="w-5 h-5"></Image>
+                  </div>
+                  <div
+                    className={
+                      isOnClick
+                        ? "border-2 border-black rounded-full p-[0.2rem] flex justify-center"
+                        : "w-8 h-8 flex items-center"
+                    }
+                    onClick={() => setIsOnClick(!isOnClick)}
+                  >
+                    <Image src={MW09GD ?? ""} alt="" className="w-5 h-5"></Image>
+                  </div>
+                  <div
+                    className={
+                      isOnClick
+                        ? "border-2 border-black rounded-full p-[0.2rem] flex justify-center"
+                        : "w-8 h-8 flex items-center"
+                    }
+                    onClick={() => setIsOnClick(!isOnClick)}
+                  >
+                    <Image src={MW09GR ?? ""} alt="" className="w-5 h-5"></Image>
+                  </div>
+                  <div
+                    className={
+                      isOnClick
+                        ? "border-2 border-black rounded-full p-[0.2rem] flex justify-center"
+                        : "w-8 h-8 flex items-center"
+                    }
+                    onClick={() => setIsOnClick(!isOnClick)}
+                  >
+                    <Image src={MW09S5 ?? ""} alt="" className="w-5 h-5"></Image>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -46,7 +109,14 @@ const Prod = () => {
                 <div className="text-sm font-bold">MW09</div>
                 <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
                 <div className="text-sm font-bold">From $ 349.00</div>
-                <div>색상1</div>
+                <div className="flex gap-3">
+                  <Image src={MW09Black ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09Blue ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09G3 ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09GD ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09GR ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09S5 ?? ""} alt="" className="w-5 h-5"></Image>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -57,7 +127,14 @@ const Prod = () => {
                 <div className="text-sm font-bold">MW09</div>
                 <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
                 <div className="text-sm font-bold">From $ 349.00</div>
-                <div>색상1</div>
+                <div className="flex gap-3">
+                  <Image src={MW09Black ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09Blue ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09G3 ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09GD ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09GR ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09S5 ?? ""} alt="" className="w-5 h-5"></Image>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -68,7 +145,14 @@ const Prod = () => {
                 <div className="text-sm font-bold">MW09</div>
                 <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
                 <div className="text-sm font-bold">From $ 349.00</div>
-                <div>색상1</div>
+                <div className="flex gap-3">
+                  <Image src={MW09Black ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09Blue ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09G3 ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09GD ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09GR ?? ""} alt="" className="w-5 h-5"></Image>
+                  <Image src={MW09S5 ?? ""} alt="" className="w-5 h-5"></Image>
+                </div>
               </div>
             </div>
           </SwiperSlide>
