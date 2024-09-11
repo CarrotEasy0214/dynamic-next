@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Notice from "@/Components/Nav/Notice";
+import MainLogo from "@/Components/Nav/MainLogo";
+import NavMenu from "@/Components/Nav/NavMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,8 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <Notice></Notice>
+        <MainLogo></MainLogo>
+        <NavMenu></NavMenu>
         {children}
       </body>
     </html>

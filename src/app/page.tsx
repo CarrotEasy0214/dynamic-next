@@ -18,7 +18,7 @@
 export default function Home() {
   return (
     <>
-      <div className="bg-black">ㅎㅇ</div>
+      <div className="">ㅎㅇ</div>
       {/* <MySlide></MySlide>
       <Prod></Prod>
       <Card></Card>
