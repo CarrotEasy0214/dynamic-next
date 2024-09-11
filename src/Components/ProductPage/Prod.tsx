@@ -15,11 +15,8 @@ import MW09GD from "../../img/color/MW09GD10-Swatch_V2.png";
 import MW09GR from "../../img/color/MW09GR9-Swatch_V2.png";
 import MW09S5 from "../../img/color/MW09S5-Swatch_V2.png";
 
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -28,54 +25,51 @@ import "swiper/css/scrollbar";
 const Prod = () => {
   return (
     <div className="w-full">
-      <div>Featured Products</div>
-      <div className="flex">
-        <Swiper spaceBetween={50} slidesPerView={1.8}>
+      <div className="text-slate-600 text-2xl ml-5">Featured Products</div>
+      <div className="flex left-10 w-full">
+        <Swiper spaceBetween={20} slidesPerView={1.8} className="flex justify-center">
           <SwiperSlide>
-            <div className="">
+            <div className="flex flex-col justify-center">
               <Image src={product1} alt="" className="w-full"></Image>
-              <div>
-                <div>이름1</div>
-                <div>가격1</div>
+              <div className="pl-5 flex flex-col gap-2">
+                <div className="text-sm font-bold">MW09</div>
+                <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
+                <div className="text-sm font-bold">From $ 349.00</div>
+                <div>색상1</div>
               </div>
-              <div>설명1</div>
-              <div>색상1</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            {" "}
-            <div className="">
+            <div className="flex flex-col justify-center">
               <Image src={product1} alt="" className="w-full"></Image>
-              <div>
-                <div>이름1</div>
-                <div>가격1</div>
+              <div className="pl-5 flex flex-col gap-2">
+                <div className="text-sm font-bold">MW09</div>
+                <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
+                <div className="text-sm font-bold">From $ 349.00</div>
+                <div>색상1</div>
               </div>
-              <div>설명1</div>
-              <div>색상1</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            {" "}
-            <div className="">
+            <div className="flex flex-col justify-center">
               <Image src={product1} alt="" className="w-full"></Image>
-              <div>
-                <div>이름1</div>
-                <div>가격1</div>
+              <div className="pl-5 flex flex-col gap-2">
+                <div className="text-sm font-bold">MW09</div>
+                <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
+                <div className="text-sm font-bold">From $ 349.00</div>
+                <div>색상1</div>
               </div>
-              <div>설명1</div>
-              <div>색상1</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            {" "}
-            <div className="">
+            <div className="flex flex-col justify-center">
               <Image src={product1} alt="" className="w-full"></Image>
-              <div>
-                <div>이름1</div>
-                <div>가격1</div>
+              <div className="pl-5 flex flex-col gap-2">
+                <div className="text-sm font-bold">MW09</div>
+                <div className="text-sm">Active Noise-Cancelling True Wireless Earphones</div>
+                <div className="text-sm font-bold">From $ 349.00</div>
+                <div>색상1</div>
               </div>
-              <div>설명1</div>
-              <div>색상1</div>
             </div>
           </SwiperSlide>
           ...
