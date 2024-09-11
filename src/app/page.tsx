@@ -2,36 +2,33 @@
 
 import Notice from "@/Components/Nav/Notice";
 
-// import MySlide from "@/Components/Slide/Myslide";
-// import Prod from "@/Components/ProductPage/Prod";
-// // import ProductPage from "@/Components/ProductPage/ProductPage";
-// import Card from "@/Components/Card/Card";
-// import CompanyGuide from "@/Components/Craft/CompanyGuide";
-// import Collabo from "@/Components/Collabo/Collabo";
-// import MandD from "@/Components/M&D/MandD";
-// import ShippingDetail from "@/Components/Shipping/ShippingDetail";
-// import SupportCenter from "@/Components/Support/SupportCenter";
-// import BlackContainer from "@/Components/BlackContainer/BlackContainer";
-// import BlackCon from "@/Components/BlackContainer/BlackCon";
-// // import TTest from "@/Components/BlackContainer/TTest";
-// import Prod from "@/Components/ProductPage/Prod";
-// import MySlideMobile from "@/Components/Slide/MySlideMobile";
+import MySlide from "@/Components/Slide/Myslide";
+import Prod from "@/Components/ProductPage/Prod";
+// import ProductPage from "@/Components/ProductPage/ProductPage";
+import Card from "@/Components/Card/Card";
+import CompanyGuide from "@/Components/Craft/CompanyGuide";
+import Collabo from "@/Components/Collabo/Collabo";
+import MandD from "@/Components/M&D/MandD";
+import ShippingDetail from "@/Components/Shipping/ShippingDetail";
+import SupportCenter from "@/Components/Support/SupportCenter";
+import BlackContainer from "@/Components/BlackContainer/BlackContainer";
+import BlackCon from "@/Components/BlackContainer/BlackCon";
+// import TTest from "@/Components/BlackContainer/TTest";
 
 export default function Home() {
   return (
     <>
       <Notice></Notice>
-      <div className="bg-black text-white text-center py-1 text-xs">ㅎㅇ</div>
-      {/* <MySlide></MySlide>
+      <MySlide></MySlide>
       <Prod></Prod>
       <Card></Card>
       <CompanyGuide></CompanyGuide>
       <Collabo></Collabo>
       <MandD></MandD>
       <ShippingDetail></ShippingDetail>
-      <SupportCenter></SupportCenter> */}
+      <SupportCenter></SupportCenter>
       {/* <BlackContainer></BlackContainer> */}
-      {/* <BlackCon></BlackCon> */}
+      <BlackCon></BlackCon>
     </>
   );
 }
