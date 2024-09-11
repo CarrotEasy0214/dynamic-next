@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <Notice></Notice>
-        <MainLogo></MainLogo>
         {children}
       </body>
     </html>
