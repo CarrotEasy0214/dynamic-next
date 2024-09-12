@@ -108,7 +108,8 @@ const slides = [
   },
 ];
 
-const Prod = ({ img, hImg }: { img: StaticImageData | undefined; hImg: StaticImageData | undefined }) => {
+const Prod = (): // { img, hImg }: { img: StaticImageData | undefined; hImg: StaticImageData | undefined }
+JSX.Element => {
   const [selectedColors, setSelectedColors] = useState<{ [key: number]: number | null }>({});
 
   const handleColorClick = (slideId: number, colorIndex: number) => {
