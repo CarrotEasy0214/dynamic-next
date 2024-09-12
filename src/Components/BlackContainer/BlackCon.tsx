@@ -71,8 +71,8 @@ const BlackCon = () => {
               <Image src={twitter} alt="" className="w-10 h-10 bg-white rounded-full p-1 cursor-pointer" />
             </div>
           </div>
-          <div className="">
-            <div className="">
+          <div className="pt-[6%]">
+            <div className="flex flex-col items-center text-xs gap-5">
               <div>Do Not Sell / Share</div>
               <div>Notice At Collection</div>
               <div>Web Accessibility</div>
@@ -81,7 +81,7 @@ const BlackCon = () => {
               <div>Terms</div>
             </div>
             <div className="my-4 border-b border-solid border-[#ddd]"></div>
-            <div>
+            <div className="text-xs">
               <p>
                 Designed and developed in New York City. P.O Box 20257 Greeley Square Station 4 East 27th street New
                 York, NY 10001
