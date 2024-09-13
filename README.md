@@ -10,7 +10,7 @@
 
 ## 프로젝트
 
-- [프로젝트]()
+- [프로젝트](http://ec2-13-125-57-188.ap-northeast-2.compute.amazonaws.com/)
 
 ## 디자인
 
