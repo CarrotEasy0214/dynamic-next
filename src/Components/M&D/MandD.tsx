@@ -17,8 +17,8 @@ const MandD = () => {
           </div>
         </div>
       ) : (
-        <div className="py-8 px-8">
-          <div className="">
+        <div className="py-8 px-5">
+          <div className="pb-5">
             <ImageBox cardImg={phone}></ImageBox>
           </div>
           <div className="flex px-4 items-center justify-center">

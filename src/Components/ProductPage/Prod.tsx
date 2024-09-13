@@ -140,12 +140,12 @@ JSX.Element => {
                   <div className="text-sm font-bold">{slide.name}</div>
                   <div className="text-sm">{slide.description}</div>
                   <div className="text-sm font-bold">From {slide.price}</div>
-                  <div className="flex gap-3">
+                  <div className="flex">
                     {slide.colors.map((color) => (
                       <div
                         key={color.index}
                         onClick={() => handleColorClick(slide.id, color.index)}
-                        className={`w-8 h-8 flex items-center justify-center cursor-pointer rounded-full ${
+                        className={`w-7 h-7 flex items-center justify-center cursor-pointer rounded-full ${
                           selectedColors[slide.id] === color.index ? "border-2 border-black" : ""
                         }`}
                       >

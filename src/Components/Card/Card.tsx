@@ -67,10 +67,10 @@ const Card = () => {
                 <div className="absolute bottom-[8%] left-[7%]">
                   <div className="text-white w-30 mb-2 lg:text-base text-sm font-bold">MH40 Wireless</div>
                   <div className="border-b-[0.5px] border-solid border-white w-[18%] mb-[2.5%]"></div>
-                  <div className="text-white lg:text-xl text-lg font-semibold mb-[2.5%] w-[95%]">
+                  <div className="text-white lg:text-xl text-base font-semibold mb-[2.5%] w-[95%]">
                     Up to 30-hours of continuous playtime, unlimited style
                   </div>
-                  <div className="bg-white w-[9.786875rem] leading-[3.375rem] text-center font-semibold text-[#4c4c4c]">
+                  <div className="bg-white w-[9.786875rem] leading-[3.375rem] text-sm text-center font-semibold text-[#4c4c4c]">
                     LEARN MORE
                   </div>
                 </div>
@@ -80,10 +80,10 @@ const Card = () => {
                 <div className="absolute bottom-[8%] left-[7%]">
                   <div className="text-white w-30 mb-2 lg:text-base text-sm font-bold">MH40 Wireless</div>
                   <div className="border-b-[0.5px] border-solid border-white w-[18%] mb-[2.5%]"></div>
-                  <div className="text-white lg:text-xl text-lg font-semibold mb-[2.5%] w-[95%]">
+                  <div className="text-white lg:text-xl text-base font-semibold mb-[2.5%] w-[95%]">
                     Up to 30-hours of continuous playtime, unlimited style
                   </div>
-                  <div className="bg-white w-[9.786875rem] leading-[3.375rem] text-center font-semibold text-[#4c4c4c]">
+                  <div className="bg-white w-[9.786875rem] leading-[3.375rem] text-sm text-center font-semibold text-[#4c4c4c]">
                     LEARN MORE
                   </div>
                 </div>
@@ -94,10 +94,10 @@ const Card = () => {
               <div className="absolute bottom-[8%] left-[7%]">
                 <div className="text-white w-30 mb-2 lg:text-base text-sm font-bold">MH40 Wireless</div>
                 <div className="border-b-[0.5px] border-solid border-white w-[18%] mb-[2.5%]"></div>
-                <div className="text-white lg:text-xl text-lg font-semibold mb-[2.5%] w-[95%]">
+                <div className="text-white lg:text-xl text-base font-semibold mb-[2.5%] w-[95%]">
                   Up to 30-hours of continuous playtime, unlimited style
                 </div>
-                <div className="bg-white w-[9.786875rem] leading-[3.375rem] text-center font-semibold text-[#4c4c4c]">
+                <div className="bg-white w-[9.786875rem] leading-[3.375rem] text-center text-sm font-semibold text-[#4c4c4c]">
                   LEARN MORE
                 </div>
               </div>

@@ -38,7 +38,7 @@ const LogoComp = () => {
                   className="fixed top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-slate-400 opacity-50"
                   onClick={onClickToggleModal}
                 ></div>
-                <div className="fixed w-[44%] h-[96%] bg-white left-5 top-5 rounded text-[#4c4c4c]">
+                <div className="fixed w-[19rem] h-[96%] bg-white left-5 top-5 rounded text-[#4c4c4c]">
                   <div className="pt-7 pb-3 pl-10" onClick={onClickToggleModal}>
                     <p className="pt-3 text-sm border w-12 h-12 rounded-full leading-12 ">X</p>
                   </div>

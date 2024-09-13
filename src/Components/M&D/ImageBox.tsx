@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const ImageBox = ({ cardImg }: any): JSX.Element => {
-  return <Image src={cardImg} alt="" className="w-full h-full" />;
+  return <Image src={cardImg} alt="" className="w-full h-full object-fill" />;
 };
 
 // const ImageBox = (): JSX.Element => {

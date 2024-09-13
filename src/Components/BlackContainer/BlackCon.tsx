@@ -38,11 +38,7 @@ const BlackCon = () => {
           <div className="pb-4">
             <div className="text-[1.3rem] font-semibold">Sign up for early access, news and exclusive offers</div>
             <div className="my-4 border-white border-solid border-2">
-              <input
-                type="text"
-                placeholder="Your email"
-                className="w-full h-12 bg-black border-none pl-4 text-white"
-              />
+              <input type="text" placeholder="Your email" className="w-full h-12 border-none pl-4 text-white" />
             </div>
             <div className="flex">
               <input type="checkbox" name="" id="" className="w-10 mr-1 mb-9 accent-black border-white" />

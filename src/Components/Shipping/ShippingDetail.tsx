@@ -54,8 +54,13 @@ const ShippingDetail = () => {
               Product Protection
             </div>
             <div className="py-1 text-center text-sm px-[2rem]">
-              Rest easy with our manufacturer warranty, ensuring that your product is protected against any
-              manufacturing defects or issues
+              <p>
+                Rest easy with our{" "}
+                <a href="/" className="border-b border-black hover:border-0 transition-all">
+                  manufacturer warranty
+                </a>
+                , ensuring that your product is protected against any manufacturing defects or issues
+              </p>
             </div>
           </div>
         </div>
