@@ -31,6 +31,7 @@ import right from "../../img/svg/right.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Link from "next/link";
 
 const slides = [
   {
@@ -167,13 +168,17 @@ const LogoComp = () => {
                       {slides.map((slide) => (
                         <SwiperSlide key={slide.id}>
                           <div className="flex flex-col justify-center mb-5">
-                            <div className="flex justify-center pl-4">
+                            <Link
+                              href="pageproduct"
+                              className="flex justify-center pl-4"
+                              onClick={onClickToggleModal}
+                            >
                               <Image
                                 src={slide.hImg ?? ""}
                                 alt=""
                                 className="w-28"
                               />
-                            </div>
+                            </Link>
                             <div className="pl-5 flex flex-col gap-2">
                               <div className="text-sm font-bold">
                                 {slide.name}
