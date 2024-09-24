@@ -6,14 +6,7 @@ import "swiper/swiper-bundle.css";
 import "swiper/css/pagination";
 import MW75S1 from "../../../img/hamburger/MW75S1-PDP_1350x1350_Hero_V2_1a4bd298-a68f-47ca-b050-b3cc3f47283e.webp";
 
-import {
-  Pagination,
-  Parallax,
-  FreeMode,
-  Navigation,
-  Thumbs,
-  Scrollbar,
-} from "swiper/modules";
+import { Pagination, Parallax, FreeMode, Navigation, Thumbs, Scrollbar } from "swiper/modules";
 import Image from "next/image";
 
 const Swipers = () => {
@@ -21,14 +14,7 @@ const Swipers = () => {
   return (
     <div>
       <Swiper
-        modules={[
-          Pagination,
-          Parallax,
-          FreeMode,
-          Navigation,
-          Thumbs,
-          Scrollbar,
-        ]}
+        modules={[Pagination, Parallax, FreeMode, Navigation, Thumbs, Scrollbar]}
         parallax={true}
         spaceBetween={10}
         thumbs={{ swiper: thumbsSwiper }}
@@ -37,7 +23,7 @@ const Swipers = () => {
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        }} // 네비게이터 모양
+        }}
       >
         <SwiperSlide className=" flex relative">
           <Image src={MW75S1} alt=""></Image>
