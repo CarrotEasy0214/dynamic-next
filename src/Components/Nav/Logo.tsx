@@ -84,52 +84,50 @@ const LogoComp = () => {
       {!isMd ? (
         <div className="flex justify-center w-[30%]">
           <div className="flex justify-center w-[10rem] mm:w-[15rem]">
-            <Image
-              src={Logo as unknown as string}
-              alt=""
-              className="cursor-pointer"
-            />
+            <Image src={Logo as unknown as string} alt="" className="cursor-pointer" />
           </div>
         </div>
       ) : (
         <div className="flex w-[20%]">
           <div className="flex justify-start items-center cursor-pointer pl-2">
-            <FontAwesomeIcon
-              icon={faBars}
-              size="lg"
-              onClick={onClickToggleModal}
-            />
+            <FontAwesomeIcon icon={faBars} size="xl" onClick={onClickToggleModal} />
+            {!isMs ? "" : <Image src={Search as unknown as string} alt="" className="cursor-pointer ml-2 relative" />}
             {isOpenModal && (
               <Modal onClickToggleModal={onClickToggleModal}>
                 <div
                   className="fixed top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-slate-400 opacity-50"
                   onClick={onClickToggleModal}
                 ></div>
-                <div className="fixed w-[19rem] h-[96%] bg-white left-5 top-5 rounded text-[#4c4c4c]">
-                  <div className="pt-7 pb-3 pl-10" onClick={onClickToggleModal}>
-                    <p className="pt-3 text-sm border w-12 h-12 rounded-full leading-12 ">
-                      X
-                    </p>
+
+                <div className="fixed w-[19rem] h-[70%] bg-white left-5 top-60 rounded-2xl text-[#4c4c4c]">
+                  <div className="pl-28 relative top-[-11%]" onClick={onClickToggleModal}>
+                    <p className="fixed pt-3 text-sm border w-12 h-12 rounded-full leading-12 bg-white">X</p>
                   </div>
                   <div
-                    className="py-2 pl-11 text-start text-[1.3rem]"
+                    className="pt-12 py-2 pl-11 text-start text-[1.3rem] font-semibold flex"
                     onClick={onClickToggleSecondModal}
                   >
-                    HEADPHONES
+                    <p>HEADPHONES</p>
+                    <Image src={right} alt="" className="pl-3 w-8"></Image>
                   </div>
-                  <div className="py-2 pl-11 text-start text-[1.3rem]">
-                    EARPHONES
+                  <div className="py-2 pl-11 pt-5 text-start text-[1.3rem] font-semibold flex">
+                    <p>EARPHONES</p>
+                    <Image src={right} alt="" className="pl-3 w-8"></Image>
                   </div>
-                  <div className="py-2 pl-11 text-start text-[1.3rem]">
-                    ACCESSORIES
+                  <div className="py-2 pl-11 pt-5 text-start text-[1.3rem] font-semibold flex">
+                    <p>ACCESSORIES</p>
+                    <Image src={right} alt="" className="pl-3 w-8"></Image>
                   </div>
-                  <div className="py-2 pl-11 text-start text-[1.3rem]">
-                    COLLABORATIONS
+                  <div className="py-2 pl-11 pt-5 text-start text-[1.3rem] font-semibold flex">
+                    <p>COLLABORATIONS</p>
+                    <Image src={right} alt="" className="pl-3 w-8"></Image>
                   </div>
-                  <div className="py-2 pl-11 text-start text-[1.3rem]">
-                    BLOG
+                  <div className="py-2 pl-11 pt-5 text-start text-[1.3rem] font-semibold flex">
+                    <p>BLOG</p>
+                    <Image src={right} alt="" className="pl-3 w-8"></Image>
                   </div>
-                  <div className="border-b w-[90%] mx-[5%] bottom-0"></div>
+
+                  <div className="border-b w-[90%] mx-[5%] bottom-0 pt-60"></div>
                   <div className="flex py-7 justify-between px-6">
                     <div>US</div>
                     <div className="flex gap-4">
@@ -146,43 +144,31 @@ const LogoComp = () => {
                   className="fixed top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-slate-400 opacity-50"
                   onClick={onClickToggleSecondModal}
                 ></div>
-                <div className="fixed w-[19rem] bg-white left-5 top-5 rounded text-[#4c4c4c]">
-                  <div
-                    className="pt-7 pb-3 pl-10"
-                    onClick={onClickToggleSecondModal}
-                  >
-                    <p className="pt-3 text-sm border w-12 h-12 rounded-full leading-12 ">
-                      X
-                    </p>
-                  </div>
+                <div className="pl-[4.31rem] relative top-[5.75rem]" onClick={onClickToggleSecondModal}>
+                  <p className="fixed pt-3 text-sm border w-12 h-12 rounded-full leading-12 bg-white">X</p>
+                </div>
+                <div className="fixed w-[19rem] h-[70%] bg-white left-5 top-60 rounded-2xl text-[#4c4c4c]">
                   <div className="py-2 pl-11 text-start text-[1rem] flex">
                     <Image src={left} alt="" className="w-5 mr-2"></Image>
                     <p>Headphone</p>
                   </div>
                   <div>
-                    <Swiper
-                      spaceBetween={20}
-                      slidesPerView={1.4}
-                      className="flex justify-center"
-                    >
+                    <Swiper spaceBetween={20} slidesPerView={1.4} className="flex justify-center">
                       {slides.map((slide) => (
                         <SwiperSlide key={slide.id}>
                           <div className="flex flex-col justify-center mb-5">
                             <Link
                               href="pageproduct"
                               className="flex justify-center pl-4"
-                              onClick={onClickToggleModal}
+                              onClick={() => {
+                                onClickToggleModal();
+                                onClickToggleSecondModal();
+                              }}
                             >
-                              <Image
-                                src={slide.hImg ?? ""}
-                                alt=""
-                                className="w-28"
-                              />
+                              <Image src={slide.hImg ?? ""} alt="" className="w-28" />
                             </Link>
                             <div className="pl-5 flex flex-col gap-2">
-                              <div className="text-sm font-bold">
-                                {slide.name}
-                              </div>
+                              <div className="text-sm font-bold">{slide.name}</div>
                               <div className="text-sm">{slide.description}</div>
                             </div>
                           </div>
@@ -191,9 +177,9 @@ const LogoComp = () => {
                     </Swiper>
                     <div>View All Headphones(14)</div>
                     <div>Compare Products</div>
-                    <div>
-                      <div className="border-b w-[90%] mx-[5%] bottom-0"></div>
-                    </div>
+
+                    <div className="border-b w-[90%] mx-[5%] bottom-0"></div>
+
                     <div className="flex justify-between px-5">
                       <div className="flex gap-2">
                         <p>US</p>
@@ -211,15 +197,6 @@ const LogoComp = () => {
                   </div>
                 </div>
               </Modal>
-            )}
-            {!isMs ? (
-              ""
-            ) : (
-              <Image
-                src={Search as unknown as string}
-                alt=""
-                className="cursor-pointer block ml-2"
-              />
             )}
           </div>
         </div>
