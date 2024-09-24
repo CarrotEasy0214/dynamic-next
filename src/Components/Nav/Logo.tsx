@@ -10,6 +10,7 @@ import useIsMs from "@/Hook/MediaMs";
 import Modal from "@/Hook/Modal";
 import Info from "../../img/svg/person-outline.svg";
 import DropArrow from "../../img/svg/dropDown.svg";
+import Compare from "../../img/svg/compare.svg";
 
 // import product1 from "../../img/feature/MW09.png";
 // import product2 from "../../img/feature/MW75.png";
@@ -32,6 +33,7 @@ import right from "../../img/svg/right.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Link from "next/link";
+import { Imperial_Script } from "next/font/google";
 
 const slides = [
   {
@@ -127,8 +129,8 @@ const LogoComp = () => {
                     <Image src={right} alt="" className="pl-3 w-8"></Image>
                   </div>
 
-                  <div className="border-b w-[90%] mx-[5%] bottom-0 pt-60"></div>
-                  <div className="flex py-7 justify-between px-6">
+                  <div className="border-b w-[90%] mx-[5%] bottom-0 pt-56"></div>
+                  <div className="flex py-5 justify-between px-6">
                     <div>US</div>
                     <div className="flex gap-4">
                       <Image src={Info} alt=""></Image>
@@ -148,15 +150,15 @@ const LogoComp = () => {
                   <p className="fixed pt-3 text-sm border w-12 h-12 rounded-full leading-12 bg-white">X</p>
                 </div>
                 <div className="fixed w-[19rem] h-[70%] bg-white left-5 top-60 rounded-2xl text-[#4c4c4c]">
-                  <div className="py-2 pl-11 text-start text-[1rem] flex">
+                  <div className="py-2 pl-11 text-start text-[1rem] flex pt-16">
                     <Image src={left} alt="" className="w-5 mr-2"></Image>
                     <p>Headphone</p>
                   </div>
-                  <div>
-                    <Swiper spaceBetween={20} slidesPerView={1.4} className="flex justify-center">
+                  <div className="pt-5">
+                    <Swiper spaceBetween={0} slidesPerView={1.4} className="flex justify-center">
                       {slides.map((slide) => (
                         <SwiperSlide key={slide.id}>
-                          <div className="flex flex-col justify-center mb-5">
+                          <div className="flex flex-col justify-center mb-5 pl-10">
                             <Link
                               href="pageproduct"
                               className="flex justify-center pl-4"
@@ -167,18 +169,22 @@ const LogoComp = () => {
                             >
                               <Image src={slide.hImg ?? ""} alt="" className="w-28" />
                             </Link>
-                            <div className="pl-5 flex flex-col gap-2">
+                            <div className="pl-5 flex flex-col gap-2 pt-5">
                               <div className="text-sm font-bold">{slide.name}</div>
-                              <div className="text-sm">{slide.description}</div>
+                              <div className="border-b border-black w-[50%] mx-[25%] pt-2"></div>
+                              <div className="text-sm w-[70%] mx-[15%]">{slide.description}</div>
                             </div>
                           </div>
                         </SwiperSlide>
                       ))}
                     </Swiper>
                     <div>View All Headphones(14)</div>
-                    <div>Compare Products</div>
+                    <div className="flex  mt-6 p-5 border-2 border-gray-900 mx-10">
+                      <div className="font-semibold text-xs text-gray-500 flex-1">Compare Products</div>
+                      <Image src={Compare} alt=""></Image>
+                    </div>
 
-                    <div className="border-b w-[90%] mx-[5%] bottom-0"></div>
+                    <div className="border-b w-[90%] mx-[5%] py-3 mb-5"></div>
 
                     <div className="flex justify-between px-5">
                       <div className="flex gap-2">
