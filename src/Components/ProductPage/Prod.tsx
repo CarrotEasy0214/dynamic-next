@@ -40,6 +40,7 @@ import MG20fourth from "../../img/color/MG20/MG20_ fourth._color.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import useIsMobile from "@/Hook/MediaMobile";
 
 const slides = [
   {
@@ -108,9 +109,9 @@ const slides = [
   },
 ];
 
-const Prod = (): // { img, hImg }: { img: StaticImageData | undefined; hImg: StaticImageData | undefined }
-JSX.Element => {
+const Prod = (): JSX.Element => {
   const [selectedColors, setSelectedColors] = useState<{ [key: number]: number | null }>({});
+  const [hoveredSlideId, setHoveredSlideId] = useState<number | null>(null); // Track the hovered slide ID
 
   const handleColorClick = (slideId: number, colorIndex: number) => {
     setSelectedColors((prev) => ({
@@ -119,51 +120,94 @@ JSX.Element => {
     }));
   };
 
-  const [isListHover, setIsListHover] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
-    <div className="w-full">
-      <div className="text-slate-600 text-2xl ml-5">Featured Products</div>
-      <div className="flex left-10 w-full">
-        <Swiper spaceBetween={20} slidesPerView={1.4} className="flex justify-center">
-          {slides.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <div className="flex flex-col justify-center">
-                <Image
-                  src={isListHover ? slide.hImg ?? "" : slide.img ?? ""}
-                  alt=""
-                  onMouseOver={() => setIsListHover(true)}
-                  onMouseOut={() => setIsListHover(false)}
-                  className="w-full"
-                />
-                <div className="pl-5 flex flex-col gap-2">
-                  <div className="text-sm font-bold">{slide.name}</div>
-                  <div className="text-sm">{slide.description}</div>
-                  <div className="text-sm font-bold">From {slide.price}</div>
-                  <div className="flex">
-                    {slide.colors.map((color) => (
-                      <div
-                        key={color.index}
-                        onClick={() => handleColorClick(slide.id, color.index)}
-                        className={`w-7 h-7 flex items-center justify-center cursor-pointer rounded-full ${
-                          selectedColors[slide.id] === color.index ? "border-2 border-black" : ""
-                        }`}
-                      >
-                        <Image
-                          src={color.src}
-                          alt={`Color ${color.index}`}
-                          className="w-5 h-5 rounded-full border border-gray-500"
-                        />
+    <>
+      {!isMobile ? (
+        <div className="w-full h-full px-20">
+          <div className="w-full">
+            <div className="text-slate-600 text-4xl">Featured Products</div>
+            <Swiper spaceBetween={20} slidesPerView={4} className="flex justify-center">
+              {slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  <div
+                    className="flex flex-col justify-center"
+                    onMouseOver={() => setHoveredSlideId(slide.id)} // Set hovered slide ID
+                    onMouseOut={() => setHoveredSlideId(null)} // Reset on mouse out
+                  >
+                    <Image src={hoveredSlideId === slide.id ? slide.hImg ?? "" : slide.img ?? ""} alt="" />
+                    <div className="pl-5 flex flex-col gap-2">
+                      <div className="text-sm font-bold">{slide.name}</div>
+                      <div className="text-sm">{slide.description}</div>
+                      <div className="text-sm font-bold">From {slide.price}</div>
+                      <div className="flex">
+                        {slide.colors.map((color) => (
+                          <div
+                            key={color.index}
+                            onClick={() => handleColorClick(slide.id, color.index)}
+                            className={`w-7 h-7 flex items-center justify-center cursor-pointer rounded-full ${
+                              selectedColors[slide.id] === color.index ? "border-2 border-black" : ""
+                            }`}
+                          >
+                            <Image
+                              src={color.src}
+                              alt={`Color ${color.index}`}
+                              className="w-5 h-5 rounded-full border border-gray-500"
+                            />
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      ) : (
+        <div className="w-full h-full">
+          <div className="w-full">
+            <div className="text-slate-600 text-2xl">Featured Products</div>
+            <Swiper spaceBetween={20} slidesPerView={1.4} className="flex justify-center">
+              {slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  <div
+                    className="flex flex-col justify-center"
+                    onMouseOver={() => setHoveredSlideId(slide.id)} // Set hovered slide ID
+                    onMouseOut={() => setHoveredSlideId(null)} // Reset on mouse out
+                  >
+                    <Image src={hoveredSlideId === slide.id ? slide.hImg ?? "" : slide.img ?? ""} alt="" />
+                    <div className="pl-5 flex flex-col gap-2">
+                      <div className="text-sm font-bold">{slide.name}</div>
+                      <div className="text-sm">{slide.description}</div>
+                      <div className="text-sm font-bold">From {slide.price}</div>
+                      <div className="flex">
+                        {slide.colors.map((color) => (
+                          <div
+                            key={color.index}
+                            onClick={() => handleColorClick(slide.id, color.index)}
+                            className={`w-7 h-7 flex items-center justify-center cursor-pointer rounded-full ${
+                              selectedColors[slide.id] === color.index ? "border-2 border-black" : ""
+                            }`}
+                          >
+                            <Image
+                              src={color.src}
+                              alt={`Color ${color.index}`}
+                              className="w-5 h-5 rounded-full border border-gray-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

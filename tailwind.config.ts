@@ -14,6 +14,7 @@ const config: Config = {
       },
     },
     screens: {
+      mobile: "22.5rem",
       ms: "43.75rem", //700px
       mm: "48.375rem",
       md: "76.25rem", //1220px
